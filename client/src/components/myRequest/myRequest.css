@@ -1,0 +1,57 @@
+.request {
+    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .request .container {
+    padding: 20px;
+  }
+  
+  .request .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .request .user .userInfo {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .request .user .userInfo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .request .user .userInfo .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .request .user .userInfo .name {
+    font-weight: 500;
+  }
+  
+  .request .user .userInfo .date {
+    font-size: 12px;
+  }
+  
+  .request .content {
+    margin: 20px 0px;
+  }
+  
+  .request .content p {
+    margin: 0;
+  }
+  
+  .request .content .category {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
