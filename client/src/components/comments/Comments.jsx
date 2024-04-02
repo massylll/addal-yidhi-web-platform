@@ -17,7 +17,7 @@ const reasons = [
 ];
 
 const Comments = ({ postId }) => {
-  const [content, setContent] = useState("");
+const [content, setContent] = useState("");
   const [openReportForms, setOpenReportForms] = useState({});
   const { currentUser } = useContext(AuthContext);
   const queryClient = useQueryClient();
@@ -94,11 +94,11 @@ const Comments = ({ postId }) => {
         <div>Loading...</div>
       ) : (
         data.map((comment) => (
-          <div className="comment" key={comment.id}>
-            <img src={"/upload/" + comment.profilePicture} alt="" />
-            <div className="info">
-              <span>{comment.username}</span>
-              <p>{comment.content}</p>
+        <div className="comment" key={comment.id}>
+          <img src={"/upload/" + comment.profilePicture} alt="" />
+          <div className="info">
+            <span>{comment.username}</span>
+            <p>{comment.content}</p>
             </div>
             <span className="date">{moment(comment.createdAt).fromNow()}</span>
             {/* Display delete button for the current user's comment */}
@@ -136,7 +136,7 @@ const Comments = ({ postId }) => {
               </div>
             )}
           </div>
-        ))
+          ))
       )}
     </div>
   );

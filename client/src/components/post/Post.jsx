@@ -2,6 +2,8 @@ import { useState } from "react";
 import moment from "moment";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
+import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
@@ -25,7 +27,7 @@ const reasons = [
 
 const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
   const [reportReason, setReportReason] = useState("");
   const { currentUser } = useContext(AuthContext);
@@ -95,7 +97,7 @@ const Post = ({ post }) => {
             </div>
           </div>
           <MoreHorizIcon onClick={() => setMenuOpen(!menuOpen)} />
-          {menuOpen && post.userId === currentUser.id && (
+{menuOpen && post.userId === currentUser.id && (
             <Button onClick={handleDelete}>delete</Button>
           )}
           {menuOpen && post.userId !== currentUser.id && (
@@ -124,10 +126,11 @@ const Post = ({ post }) => {
             <TryOutlinedIcon/>
             See Comments
           </div>
+
         </div>
         {commentOpen && <Comments postId={post.id} />}
       </div>
-      {reportOpen && (
+{reportOpen && (
         <div className="report-form">
           <Select
             value={reportReason}

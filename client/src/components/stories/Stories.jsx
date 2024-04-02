@@ -7,7 +7,7 @@ import moment from "moment";
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 
 const Stories = () => {
-  const { currentUser } = useContext(AuthContext);
+const { currentUser } = useContext(AuthContext);
   const queryClient = useQueryClient();
   const [img, setImg] = useState(""); // State to manage new story image
 
@@ -50,18 +50,18 @@ const Stories = () => {
 
   return (
     <div className="stories">
-      {/* Form to upload new story */}
+{/* Form to upload new story */}
       <div className="story">
-        <input
+          <input
           type="file"
           accept="image/*"
           onChange={(e) => setImg(e.target.files[0])}
         />
         <img src={`/upload/${currentUser.profilePicture}`} alt="" />
-        <span>{currentUser.username}</span>
-        <button onClick={handleStoryUpload}><AddBoxOutlinedIcon/></button>
-      </div>
-
+          <span>{currentUser.username}</span>
+          <button onClick={handleStoryUpload}><AddBoxOutlinedIcon/></button>
+        </div>
+      
       
 
       {/* Display existing stories */}
@@ -71,12 +71,12 @@ const Stories = () => {
         <div>Loading...</div>
       ) : (
         data.map((story) => (
-          <div className="story" key={story.id}>
-            <img src={story.img} alt="" />
-            <span>{story.username}</span>
-            <span className="date">{moment(story.createdAt).fromNow()}</span>
-          </div>
-        ))
+        <div className="story" key={story.id}>
+          <img src={story.img} alt="" />
+          <span>{story.username}</span>
+<span className="date">{moment(story.createdAt).fromNow()}</span>
+        </div>
+      ))
       )}
     </div>
   );

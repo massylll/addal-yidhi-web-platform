@@ -114,9 +114,9 @@ if (averageRating === null) {
       <div className="container">
 
       <div className="item">
-      <span>My Average Rating <StarHalfOutlinedIcon /></span><br></br>
+          <span>My Average Rating <StarHalfOutlinedIcon /></span><br></br>
       <span>{ratingComponent}</span>
-    </div>
+                        </div>
 
     <div className="item">
       <span>Notifications <NotificationsActiveOutlinedIcon/></span>
@@ -125,28 +125,28 @@ if (averageRating === null) {
           <div className="userInfo">
             <p>{notification}</p>
           </div>
-         
-          { /*<span>{notification.createdAt}</span>*/}
+
+{ /*<span>{notification.createdAt}</span>*/}
         </div>
-      ))}
+))}
     </div>
 
-      <div className="item">
-      <span>Suggestions For You <AssistantOutlinedIcon/></span>
-      {suggestedUsers.map(user => (
+        <div className="item">
+          <span>Suggestions For You <AssistantOutlinedIcon/></span>
+          {suggestedUsers.map(user => (
         <div className="user" key={user.id}>
-          <div className="userInfo">
-            <img src={user.profilePicture} alt={user.username} />
+            <div className="userInfo">
+              <img src={user.profilePicture} alt={user.username} />
             <span>{user.username}</span>
-          </div>
-          <div className="buttons">
-          <button onClick={() => { followUser(user.id) }}>Follow</button>
-                <button onClick={() => { dismissSuggestion(user.id) }}>Dismiss</button>
+            </div>
+            <div className="buttons">
+              <button onClick={() => { followUser(user.id) }}>Follow</button>
+              <button onClick={() => { dismissSuggestion(user.id) }}>Dismiss</button>
           </div>
         </div>
-      ))}
-    </div>
-
+        ))}
+          </div>
+          
 
 
 
@@ -159,7 +159,7 @@ if (averageRating === null) {
 
 
 
-    
+
       </div>
     </div>
   );

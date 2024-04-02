@@ -28,16 +28,16 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="left">
+<div className="left">
         <span>PlayPals</span>
         <div className="search">
           <SearchOutlinedIcon />
           <input type="text" placeholder="Search..." />
         </div>
-      </div>
-      <div className="right">
+    </div>
+    <div className="right">
         <Button onClick={handleLogout}><LogoutOutlinedIcon/></Button>
-      </div>
+</div>
     </div>
   );
 };

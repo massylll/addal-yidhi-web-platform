@@ -1,82 +1,33 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./register.scss";
-import axios from "axios";
+import '../../App.css';
+import Buttond from '../../components/button';
+import InputField from '../../components/input field-email';
 
-const Register = () => {
-  const [inputs, setInputs] = useState({
-    username: "",
-    email: "",
-    password: "",
-    name: "",
-  });
-  const [err, setErr] = useState(null);
+const Register=() =>{
+      return (
+    <div className="App">
+<div style={{paddingTop: 98, paddingBottom: 212, paddingLeft: 386, paddingRight: 386, background: 'linear-gradient(180deg, #3E16B0 0%, #29126A 100%)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+    <div style={{flex: '1 1 0', alignSelf: 'stretch', paddingTop: 20, paddingBottom: 40, paddingLeft: 60, paddingRight: 60, background: 'white', borderRadius: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 41, display: 'inline-flex'}}>
+        <div style={{color: 'black', fontSize: 32, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>Sign Up</div>
+        <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 16, display: 'flex'}}>
 
-  const handleChange = (e) => {
-    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+            <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 24, display: 'flex'}}>
+                <div style={{color: 'black', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>Account details</div>
+                <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
 
-  const handleClick = async (e) => {
-    e.preventDefault();
+                </div>
 
-    try {
-      await axios.post("http://localhost:8800/api/auth/register", inputs);
-    } catch (err) {
-      setErr(err.response.data);
-    }
-  };
+            </div>
+            <InputField label="E-mail"placeholder="E-mail" logo='../icons/sms.svg'/>
+            <InputField label="Username"placeholder="Username" logo='../icons/user.svg'/>
+            <InputField label="Password"placeholder="Password" logo='../icons/lock.svg'/>
+            <InputField label="Confirm password"placeholder="Confirm password"/>
 
-  console.log(err)
-
-  return (
-    <div className="register">
-      <div className="card">
-        <div className="left">
-          <h1>Lama Social.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
-          </p>
-          <span>Do you have an account?</span>
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
         </div>
-        <div className="right">
-          <h1>Register</h1>
-          <form>
-            <input
-              type="text"
-              placeholder="Username"
-              name="username"
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              onChange={handleChange}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              onChange={handleChange}
-            />
-            {err && err}
-            <button onClick={handleClick}>Register</button>
-          </form>
-        </div>
-      </div>
+<Buttond label={"Next"}/>
+    </div>
+</div>
     </div>
   );
-};
+}
 
 export default Register;

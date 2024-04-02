@@ -119,24 +119,24 @@ const Profile = () => {
 
   return (
     <div className="profile">
-      {isLoading ? (
+{isLoading ? (
         "loading"
       ) : (
         <>
-          <div className="images">
-            <img src={"/upload/"+data.coverPicture} alt="" className="cover" />
-            <img src={"/upload/"+data.profilePicture} alt="" className="profilePicture" />
-          </div>
-          <div className="profileContainer">
-            <div className="uInfo">
-              
-              <div className="center">
-                <span>{data.username}</span>
-                
-                <div className="info">
-                  <div className="item">
-                    <PlaceIcon />
-                    <span>{data.location}</span>
+      <div className="images">
+        <img src={"/upload/"+data.coverPicture} alt="" className="cover" />
+        <img src={"/upload/"+data.profilePicture} alt="" className="profilePicture" />
+      </div>
+      <div className="profileContainer">
+        <div className="uInfo">
+
+          <div className="center">
+            <span>{data.username}</span>
+
+            <div className="info">
+              <div className="item">
+                <PlaceIcon />
+                <span>{data.location}</span>
                   </div>
                   <div className="item">
                    
@@ -183,12 +183,12 @@ const Profile = () => {
             </div>
             <Posts userId={userId} />
           </div>
-        </>
+</>
       )}
       {openUpdate && <Update setOpenUpdate={setOpenUpdate} user={data} />}
-      
-    </div>
-  );
+
+        </div>
+        );
 };
 
 export default Profile;

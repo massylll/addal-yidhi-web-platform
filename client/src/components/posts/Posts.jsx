@@ -17,7 +17,7 @@ const Posts = ({ userId }) => {
       ) : (
         data.map((post) => <Post post={post} key={post.id} />)
       )}
-    </div>
+  </div>
   );
 };
 

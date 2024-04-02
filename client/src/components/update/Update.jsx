@@ -78,7 +78,7 @@ const Update = ({ setOpenUpdate, user }) => {
                       ? URL.createObjectURL(cover)
                       : "/upload/" + user.coverPicture
                   }
-                  style={{borderRadius:"50%"}}
+style={{borderRadius:"50%"}}
                   alt=""
                 />
                 <CloudUploadIcon className="icon" />
@@ -99,7 +99,7 @@ const Update = ({ setOpenUpdate, user }) => {
                       ? URL.createObjectURL(profile)
                       : "/upload/" + user.profilePicture
                   }
-                  style={{borderRadius:"50%"}}
+style={{borderRadius:"50%"}}
                   alt=""
                 />
                 <CloudUploadIcon className="icon" />

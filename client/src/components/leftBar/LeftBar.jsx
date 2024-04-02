@@ -11,12 +11,13 @@ import Item from "./Item"; // Assuming Item component is in a separate file
 import "./leftBar.scss";
 
 const LeftBar = () => {
+
   const { currentUser } = useContext(AuthContext);
-  const [selected, setSelected] = useState(""); // assuming you are using useState hook
+const [selected, setSelected] = useState(""); // assuming you are using useState hook
 
   return (
-    <div className="leftBar">
-      <div className="container">
+  <div className="leftBar">
+    <div className="container">
         <div className="menu">
           <Item
             title="Home"
@@ -69,7 +70,7 @@ const LeftBar = () => {
           />
         </div>
       </div>
-    </div>
+</div>
   );
 };
 

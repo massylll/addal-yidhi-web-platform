@@ -31,7 +31,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <div className="card">
+<div className="card">
         <div className="left">
           <span>Don't you have an account?</span>
           <Link to="/register">
@@ -40,7 +40,7 @@ const Login = () => {
         </div>
         <div className="right">
           <h1>Login</h1>
-          <form>
+        <form>
             <input
               type="text"
               placeholder="Username"
@@ -56,8 +56,8 @@ const Login = () => {
             {err && err}
             <button onClick={handleLogin}>Login</button>
           </form>
-        </div>
-      </div>
+    </div>
+</div>
     </div>
   );
 };

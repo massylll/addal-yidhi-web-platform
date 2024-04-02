@@ -1,5 +1,5 @@
 .login {
-  height: 90vh;
+  height: 100vh;
   background-color: rgb(193, 190, 255);
   display: flex;
   align-items: center;
@@ -29,8 +29,13 @@
         font-size: 100px;
         line-height: 100px;
       }
+      .body{
+        font-family: "Inter", sans-serif;
+      }
       
-      p {
+      input {
+        all: unset;
+        width: 400;
       }
 
       span {

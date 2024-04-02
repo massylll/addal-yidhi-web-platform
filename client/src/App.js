@@ -1,8 +1,11 @@
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import Requests from "./pages/requests/Requests";
+
 import {
   createBrowserRouter,
   RouterProvider,
+  Route,
   Outlet,
   Navigate,
   useLocation
@@ -24,9 +27,10 @@ import { AuthContext } from "./context/authContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
-  const { currentUser } = useContext(AuthContext);
+  const {currentUser} = useContext(AuthContext);
+
   const { darkMode } = useContext(DarkModeContext);
-  const queryClient = new QueryClient();
+const queryClient = new QueryClient();
 
   const Layout = () => {
     const { pathname } = useLocation(); // Get current location
@@ -49,12 +53,13 @@ function App() {
       </QueryClientProvider>
     );
   };
-  
+
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to="/login" />;
     }
+
     return children;
   };
 
@@ -101,10 +106,13 @@ function App() {
       path: "/login",
       element: <Login />,
     },
+
     {
       path: "/register",
       element: <Register />,
     },
+
+
   ]);
 
   return (

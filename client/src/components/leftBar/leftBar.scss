@@ -1,12 +1,12 @@
 @import "../../style.scss";
 
 .leftBar {
-  @include themify($themes) {
+    @include themify($themes) {
     flex: 0.8;
     position: sticky;
     top: 70px;
     height: calc(100vh - 70px);
-    overflow: scroll;
+   overflow: scroll;
     background-color: themed("bg");
     color: themed("textColor");
 

@@ -1,5 +1,6 @@
 import "./share.scss";
 import Image from "../../assets/img.png";
+import Map from "../../assets/map.png";
 import Friend from "../../assets/friend.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
@@ -8,7 +9,7 @@ import { makeRequest } from "../../axios";
 import { Button } from "@mui/material";
 
 const Share = () => {
-  const [file, setFile] = useState(null);
+const [file, setFile] = useState(null);
   const [description, setDescription] = useState("");
 
   const { currentUser } = useContext(AuthContext);
@@ -62,7 +63,7 @@ const Share = () => {
     <div className="share">
       <div className="container">
         <div className="top">
-        <img src={"/upload/" + currentUser.profilePicture} alt="" />
+          <img src={"/upload/" + currentUser.profilePicture} alt="" />
           <input
             type="text"
             placeholder={`What's on your mind ${currentUser.username}?`}
@@ -85,7 +86,7 @@ const Share = () => {
                 <span>Add Image</span>
               </div>
             </label>
-            <div className="item">
+<div className="item">
               <img src={Friend} alt="Tag Friends" />
               <span>Tag Friends</span>
             </div>
