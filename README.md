@@ -117,5 +117,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
-> ⚠️ Heads up: MIT is a **permissive** license — anyone can copy, modify, and even resell this project as long as they keep the copyright notice. If you actually want to *restrict* reuse (which "needs to be protected" suggested earlier), swap the badge for `License-Proprietary-red` and replace the text above with an "All Rights Reserved" notice. Happy to make that swap in one edit if you want it.
